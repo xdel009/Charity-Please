@@ -1,0 +1,202 @@
+body {
+  font-family: "Avenir", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #fff5e1;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #b8683a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  /* use flex so text/image centers vertically and horizontally */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+
+  width: 120.4918033px;
+  height:100px;
+  /* give more room so letters/picture are not cut off */
+  padding: 14px 18px; /* increase space inside the circle */
+
+  /* keep circle look */
+  border-radius: 50%;
+
+  /* include padding in size calculations */
+  box-sizing: border-box;
+
+  /* adjust text sizing and spacing */
+  font-size: 1.4rem;
+  line-height: 1;
+  white-space: nowrap; /* prevent text from wrapping */
+
+  background-color: #4d88a7;
+  color: #fdd835;
+
+  /* ensure content is not clipped */
+  overflow: visible;
+}
+
+/* ensure the image fits the circular container */
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keep image aspect ratio */
+  border-radius: 50%;
+  display: block;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #1a2b58;
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 span {
+  color: #1a2b58;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+    left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%); /* vertically center with header height */
+  z-index: 1;
+}
+
+.nav-btn {
+  background-color: #fdd835;
+  color: #1a2b58;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn:hover {
+  background-color: #ffe873;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 40px 20px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 400px;
+}
+
+.hero-text h2 {
+  color: #1a2b58;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.highlight {
+  background-color: #ffefd2;
+  color: #8b3f00;
+  border: 2px solid #b47bff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cta-btn {
+  background-color: #1a2b58;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #273b7a;
+}
+
+.hero-img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    margin: 10px 0;
+       position: static;
+    transform: none;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-img {
+    width: 80%;
+    height: auto;
+  }
+}
